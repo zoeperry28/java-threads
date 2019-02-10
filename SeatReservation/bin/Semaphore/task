@@ -1,0 +1,27 @@
+Un-assessed exercise. Was the subject of the Monday surgery session in week 29 (4th Feb).
+
+A central computer is connected to remote terminals via communication 
+links and is used to automate seat reservations for a concert hall. The remote terminals 
+are located in booking offices which are geographically dispersed. When a client enters a 
+booking office, the clerk uses the terminal to find a free seat and then books it for the 
+client. Assume that there are 100 seats.
+
+The task is to write a Java simulation of this scenario.
+
+Assume that there are two booking offices: office 1 serves 40 clients and 
+office 2 serves 60. A concurrent simulation will need two threads, one for each office. 
+The two threads share the state of seat reservations, which can be represented by an 
+integer variable recording the number of remaining free seats. The requirements are 
+given below:
+
+    Multiple bookings for the same seat are not allowed, and seats are booked in order, 
+    ie, from seat 1 to seat 100.
+    
+    When a seat is booked, the simulation should report (using a simple System.out.println)
+    which seat has been booked by which office.
+    
+    When all the seats are booked, the simulation should report it (hence a thread group 
+    executor could be needed).
+    
+    Use Thread.sleep(1000) and Thread.sleep(1500) to simulate the time gap between clients
+    arriving at office 1 and office 2, respectively.
